@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seekbar"
+        android:progressDrawable="@drawable/seekbar_track"
+        app:layout_constraintBottom_toTopOf="@+id/BackbackgoundImageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songNameTv"
+        app:layout_constraintVertical_bias="0.61" />
+
+    <TextView
+        android:id="@+id/songNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="@string/song_playing"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainImageView" />
+
+    <ImageView
+        android:id="@+id/BackbackgoundImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/playBackgroundImageview"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/backImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:background="@drawable/previous"
+        app:layout_constraintBottom_toBottomOf="@+id/BackbackgoundImageview"
+        app:layout_constraintEnd_toEndOf="@+id/BackbackgoundImageview" />
+
+    <ImageView
+        android:id="@+id/forwardBackgroungImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/playBackgroundImageview"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/playBackgroundImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="43dp"
+        app:layout_constraintEnd_toStartOf="@+id/forwardBackgroungImageview"
+        app:layout_constraintStart_toEndOf="@+id/BackbackgoundImageview"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/forwImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toBottomOf="@+id/forwardBackgroungImageview"
+        app:layout_constraintEnd_toEndOf="@+id/forwardBackgroungImageview"
+        app:srcCompat="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/playImageview"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playBackgroundImageview"
+        app:layout_constraintEnd_toEndOf="@+id/playBackgroundImageview"
+        app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/mainImageView"
+        android:layout_width="125dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="230dp"
+        android:background="@drawable/shape"
+        app:layout_constraintBottom_toTopOf="@+id/songNameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/musicNote"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainImageView"
+        app:layout_constraintEnd_toEndOf="@+id/mainImageView"
+        app:layout_constraintStart_toStartOf="@+id/mainImageView"
+        app:layout_constraintTop_toTopOf="@+id/mainImageView"
+        app:srcCompat="@drawable/ic_baseline_music_note_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
